@@ -17,12 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('n_Album','App\Http\Controllers\controller_album@hello');
+Route::get('n_Album','App\Http\Controllers\controller_album@album_main');
+Route::get('n2_Album','App\Http\Controllers\controller_album@album_main2');
+Route::get('n_sideBar','App\Http\Controllers\controller_album@sideBar');
 use Intervention\Image\Facades\Image;
 
-// usage inside a laravel route
-Route::get('/', function()
-{
-    $img = Image::make('https://images.pexels.com/photos/4273439/pexels-photo-4273439.jpeg')->resize(300, 200); // 這邊可以隨便用網路上的image取代
-    return $img->response('jpg');
-});
+ 
