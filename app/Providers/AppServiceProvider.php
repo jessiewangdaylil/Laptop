@@ -24,5 +24,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        View()->share('global','Hello');
+        View()->composer(['album.*'],function($view){
+            $view->with('album_test','Date 2022 / 11 / 25');
+
+        });
     }
 }

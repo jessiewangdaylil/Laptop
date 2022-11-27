@@ -1,7 +1,9 @@
 
 @extends('parent.Dashboard')
 
-@yeild('css','<link rel="stylesheet" href="{{asset('album2/style.css')}}">')
+@section('css')
+  <link rel="stylesheet" href="{{asset('album2/style.css')}}">
+@endsection
 
 @section('content')
 @php
@@ -55,7 +57,8 @@ $contentDetails = ['fadeIn-bottom',
     }
 
 @endphp
-
+{{-- {{$global}}
+{{$album_test}} --}}
 @endsection
 
 

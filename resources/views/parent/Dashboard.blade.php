@@ -5,7 +5,7 @@
   <title>CodePen - Bootstrap 3 - Sidebar Layout</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css'><link rel="stylesheet" href="{{asset('dashboard/style.css')}}">
-
+@yield('css')
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -23,6 +23,7 @@
       </li>
       <li>
         <a href="#">
+
           <i class="zmdi zmdi-link"></i> Shortcuts
         </a>
       </li>
@@ -53,7 +54,7 @@
       </li>
     </ul>
   </div>
-  @section('content')
+
   <!-- Content -->
   <div id="content">
     <nav class="navbar navbar-default">
@@ -68,11 +69,13 @@
       </div>
     </nav>
     <div class="container-fluid">
+      @section('content')
       <h1>Simple Sidebar</h1>
       <p>
         Make sure to keep all page content within the 
         <code>#content</code>.
       </p>
+      @show
     </div>
   </div>
 </div>
