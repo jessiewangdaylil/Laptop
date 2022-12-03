@@ -13,17 +13,17 @@
   <!-- Sidebar -->
   <div id="sidebar">
     <header>
-      <a href="#">My App</a>
+      <a href="#">@yield('sidebarTitle','My App') </a>
     </header>
     <ul class="nav">
+      @section('sidebarItems')
       <li>
-        <a href="https://tc.trip.com/?allianceid=742329&sid=1621575&ppcid=ckid-9747756_adid-520294861086_akid-kwd-327677436158_adgid-128904777544&utm_source=google&utm_medium=cpc&utm_campaign=Ctrip_TW-zh+Broad&ds_cid=71700000083241128&ds_kid=43700063569783280&gclid=CjwKCAiAyfybBhBKEiwAgtB7fjdh1GASiM-pSJ1L2y0lkUcQ4TyVtOlYnyASbrfKX7dReIiFYtWBjhoCGkwQAvD_BwE&gclsrc=aw.ds">
+        <a href="#">
           <i class="zmdi zmdi-view-dashboard"></i> Trip
         </a>
       </li>
       <li>
         <a href="#">
-
           <i class="zmdi zmdi-link"></i> Shortcuts
         </a>
       </li>
@@ -52,6 +52,7 @@
           <i class="zmdi zmdi-comment-more"></i> Contact
         </a>
       </li>
+      @show
     </ul>
   </div>
 
@@ -72,15 +73,14 @@
       @section('content')
       <h1>Simple Sidebar</h1>
       <p>
-        Make sure to keep all page content within the 
+        Make sure to keep all page content within the
         <code>#content</code>.
       </p>
       @show
     </div>
   </div>
 </div>
-@show
 <!-- partial -->
-  
+
 </body>
 </html>

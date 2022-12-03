@@ -25,6 +25,8 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         View()->share('global','Hello');
+        $date = Carbon::now()->local('zh-tw');
+
         View()->composer(['album.*'],function($view){
             $view->with('album_test','Date 2022 / 11 / 25');
 
