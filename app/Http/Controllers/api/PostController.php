@@ -61,4 +61,18 @@ class PostController extends Controller
     {
         //
     }
+        public function doAny(Request  $request){
+      // //取得完整檔名
+      // $filenameWithExt = $request->file('pic')->getClientOringnalName();
+      // //只取檔名
+      // $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+      // //只取副檔名
+      // $extension = $request->file('pic')->getClientOriginalExtension();
+      // //生成新檔名
+      // $fileNameToStore = $filename.'_'.time().'.'.$extension;
+      // //儲存圖片
+      // $path = $request->file('pic')->storeAs('public/storage/pic',$fileNameToStore);
+      // return $path;
+      return $request->all();
+    }
 }

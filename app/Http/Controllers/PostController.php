@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function __construct()
-    {
-      $this->middleware('auth')->except('create','index');
-      // $this->middleware('auth')->only('index');
-    }
+    // public function __construct()
+    // {
+    //   $this->middleware('auth')->except('create','index','doAny');
+    //   // $this->middleware('auth')->only('index');
+    // }
 
     /**
      * Display a listing of the resource.
@@ -88,4 +88,6 @@ class PostController extends Controller
     {
         //
     }
+
+
 }
